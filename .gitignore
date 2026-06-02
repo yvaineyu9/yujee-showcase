@@ -1,0 +1,35 @@
+# --- secrets: never commit ---
+.env
+.env.*
+!.env.example
+*.local.env
+secrets*.env
+*.pem
+*.key
+
+# --- node / next ---
+node_modules/
+.next/
+.turbo/
+.vercel/
+dist/
+build/
+*.tsbuildinfo
+
+# --- python ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# --- local db / logs / os ---
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.log
+.DS_Store

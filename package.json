@@ -1,0 +1,16 @@
+{
+  "name": "yujee-agent-rebuild",
+  "private": true,
+  "packageManager": "pnpm@9.15.1",
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "web:dev": "pnpm --filter @yujee/web dev",
+    "agent:dev": "cd apps/agent && uvicorn src.main:app --reload --port 8001",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm --filter @yujee/contracts typecheck && pnpm --filter @yujee/web typecheck"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.4.5"
+  }
+}
